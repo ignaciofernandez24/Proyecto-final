@@ -1,0 +1,27 @@
+.main {
+    background-image: url(../img/exbcomida.web.jpg);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+}
+
+.container {
+    form {
+
+        background-color: map-get($colores,color-tercero);
+        height: 400px;
+        width: 350px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+
+        h3 {
+            font-weight: 200;
+        }
+    }
+}
+    

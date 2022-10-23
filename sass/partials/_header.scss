@@ -1,0 +1,87 @@
+.header {
+    background-color: map-get($colores, color-tercero);
+    padding: 0.5em 0;
+    .container {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        h1 {
+            img {
+                width: 60px;
+                background-color: black;
+            }
+    
+        }
+    
+        .bx {
+            font-size: 40px;
+            color: map-get($colores, color-tercero);
+            display: none;
+        }
+    
+        .nav {
+            .nav_list {
+                display: flex;
+                gap: 25px;
+    
+                .nav_link {
+                    a {
+                        color: map-get($colores,color-secundario);
+                    }
+                }
+            }
+        }
+    
+    }
+} 
+
+
+
+@media (max-width: 500px) {
+    .header{
+        height: 78px;
+        position: relative;
+        .container {
+            max-width: 350px;
+        
+            .bx {
+                display: block;
+            }
+        
+            #btn-menu {
+                display: none;
+        
+                &:checked~.nav {
+                    left: -150px;
+                }
+            }
+        
+            .nav {
+                background-color: map-get($colores, color-tercero);
+                position: absolute;
+                top: 78px;
+                left: 0;
+                z-index: 3;
+                transition: all 0.5s ease;
+        
+                .nav_list {
+                    flex-direction: column;
+                    width: 150px;
+                    padding: 25px;
+        
+                    .nav_link {
+                        .a {
+                            color: map-get($colores, color-texto);
+                        }
+                    }
+                }
+        
+            }
+        }
+        
+    }   
+}
+
